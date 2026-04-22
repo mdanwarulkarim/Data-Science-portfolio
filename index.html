@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MD Anwarul Karim | Data Scientist & Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════ CURSOR ═══════════════════ -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+
+<!-- ═══════════════════ NAV ═══════════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">AK<span class="dot">.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section id="hero">
+  <canvas id="particleCanvas"></canvas>
+  <div class="hero-content">
+    <div class="hero-tag"><span class="mono">&lt;hello world /&gt;</span></div>
+    <h1 class="hero-name">MD Anwarul<br /><span class="accent">Karim</span></h1>
+    <div class="hero-roles">
+      <span class="role-static">I am a </span>
+      <span class="role-dynamic" id="roleText"></span><span class="caret">|</span>
+    </div>
+    <p class="hero-sub">Building data-driven solutions from Dhaka, Bangladesh.<br/>Master's student at East West University.</p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+    </div>
+      <a href="https://github.com/mdanwarulkarim" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/anwarul-karim-377a0b194/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="https://sites.google.com/view/anwarulkarim/home" target="_blank" rel="noopener" class="social-link" aria-label="Website">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      </a>
+  </div>
+  <div class="hero-scroll-hint">
+    <span>scroll down</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════ ABOUT ═══════════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="section-label mono">01 / about</div>
+    <div class="about-grid">
+      <div class="about-photo-wrap">
+        <div class="photo-ring"></div>
+        <div class="photo-frame">
+          <div class="photo-placeholder">
+            <span>AK</span>
+          </div>
+        </div>
+        <div class="about-badge">
+          <span class="badge-num">3.50</span>
+          <span class="badge-text">CGPA</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+        <p>I am a highly motivated Data Scientist and Business Intelligence Analyst based in Dhaka, Bangladesh. With a Bachelor's degree in Business Intelligence from IIUM Malaysia and currently pursuing my Master's in Data Science at East West University, I bring both academic depth and hands-on project experience.</p>
+        <p>My passion lies in turning raw data into actionable insights — whether through machine learning models, interactive dashboards, or robust database systems. I thrive at the intersection of data, technology, and business strategy.</p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-num accent">8+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num accent">2+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num accent">2</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+        </div>
+        <div class="about-tags">
+          <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Power BI</span>
+          <span class="tag">Machine Learning</span><span class="tag">Data Visualization</span>
+          <span class="tag">NLP</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ SKILLS ═══════════════════ -->
+<section id="skills">
+  <div class="container">
+    <div class="section-label mono">02 / skills</div>
+    <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
+    <div class="skills-grid">
+
+      <div class="skill-category">
+        <div class="skill-cat-header">
+          <span class="skill-icon">⚡</span>
+          <h3>Programming & Data</h3>
+        </div>
+        <div class="skill-bars">
+          <div class="skill-bar-item" data-level="88">
+            <div class="skill-name"><span>Python</span><span class="skill-pct">88%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="88"></div></div>
+          </div>
+          <div class="skill-bar-item" data-level="85">
+            <div class="skill-name"><span>SQL</span><span class="skill-pct">85%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="85"></div></div>
+          </div>
+          <div class="skill-bar-item" data-level="80">
+            <div class="skill-name"><span>Pandas / NumPy</span><span class="skill-pct">80%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="80"></div></div>
+          </div>
+          <div class="skill-bar-item" data-level="72">
+            <div class="skill-name"><span>Scikit-Learn / TensorFlow</span><span class="skill-pct">72%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="72"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-cat-header">
+          <span class="skill-icon">📊</span>
+          <h3>BI & Visualization</h3>
+        </div>
+        <div class="skill-bars">
+          <div class="skill-bar-item">
+            <div class="skill-name"><span>Power BI (DAX)</span><span class="skill-pct">82%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="82"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-name"><span>Excel (Dashboards)</span><span class="skill-pct">90%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="90"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-name"><span>Looker Studio</span><span class="skill-pct">75%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="75"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-name"><span>Figma (UI/UX)</span><span class="skill-pct">70%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="70"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-cat-header">
+          <span class="skill-icon">🗄️</span>
+          <h3>Database & ML</h3>
+        </div>
+        <div class="skill-bars">
+          <div class="skill-bar-item">
+            <div class="skill-name"><span>MySQL / SQLite</span><span class="skill-pct">85%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="85"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-name"><span>Machine Learning</span><span class="skill-pct">78%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="78"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-name"><span>Deep Learning / NLP</span><span class="skill-pct">70%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="70"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-name"><span>Statistics</span><span class="skill-pct">80%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="80"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-cat-header">
+          <span class="skill-icon">🌐</span>
+          <h3>Web & Other Tools</h3>
+        </div>
+        <div class="skill-bars">
+          <div class="skill-bar-item">
+            <div class="skill-name"><span>Flask / HTML / CSS</span><span class="skill-pct">75%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="75"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-name"><span>WordPress / Google Sites</span><span class="skill-pct">80%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="80"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-name"><span>MS Office Suite</span><span class="skill-pct">92%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="92"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-name"><span>Google Sheets / Canva</span><span class="skill-pct">85%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="85"></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ PROJECTS ═══════════════════ -->
+<section id="projects">
+  <div class="container">
+    <div class="section-label mono">03 / projects</div>
+    <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+    <p class="section-sub">Click any card to expand full details</p>
+    <div class="projects-grid" id="projectsGrid">
+
+      <div class="project-card" data-category="database">
+        <div class="project-card-front">
+          <div class="project-num mono">01</div>
+          <div class="project-icon">🏠</div>
+          <h3>AREMS — Real Estate Database</h3>
+          <p>MySQL-based relational database system for real estate management with full lifecycle implementation.</p>
+          <div class="project-tags"><span>MySQL</span><span>Python</span><span>Flask</span></div>
+          <span class="expand-hint">Click to expand ↓</span>
+        </div>
+        <div class="project-card-back">
+          <h3>AREMS — Real Estate Database System</h3>
+          <p>A comprehensive MySQL relational database for managing real estate properties, agents, clients, transactions, and payments. Includes triggers, stored procedures, and a Flask-based demo web application.</p>
+          <ul>
+            <li>Schema design with foreign key constraints</li>
+            <li>Automated triggers for status updates</li>
+            <li>Flask web app with dark luxury UI</li>
+            <li>Static GitHub Pages deployment</li>
+          </ul>
+          <a href="https://github.com/mdanwarulkarim/Real_Estate_Database_System-AREMS-.git" target="_blank" class="project-link">View on GitHub →</a>
+          <span class="collapse-hint">Click to collapse ↑</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="ml">
+        <div class="project-card-front">
+          <div class="project-num mono">02</div>
+          <div class="project-icon">🤖</div>
+          <h3>Fake News Detection — ML & NLP</h3>
+          <p>Machine learning pipeline to classify real vs. fake news using NLP techniques and deep learning.</p>
+          <div class="project-tags"><span>Python</span><span>NLP</span><span>TensorFlow</span></div>
+          <span class="expand-hint">Click to expand ↓</span>
+        </div>
+        <div class="project-card-back">
+          <h3>Real & Fake News Detection using ML</h3>
+          <p>Built a complete NLP pipeline using Scikit-Learn and TensorFlow to detect fake news. Applied text preprocessing, TF-IDF vectorization, and classification models.</p>
+          <ul>
+            <li>Text preprocessing and feature extraction</li>
+            <li>Multiple ML classifiers compared</li>
+            <li>TensorFlow deep learning model</li>
+            <li>Performance metrics and evaluation</li>
+          </ul>
+          <a href="https://github.com/mdanwarulkarim/Real-Data-and-Fake-data-News-Detection-using-ML" target="_blank" class="project-link">View on GitHub →</a>
+          <span class="collapse-hint">Click to collapse ↑</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="analytics">
+        <div class="project-card-front">
+          <div class="project-num mono">03</div>
+          <div class="project-icon">🍕</div>
+          <h3>PizzaHut Sales Analytics — SQL</h3>
+          <p>Comprehensive sales reporting and analytics using advanced SQL queries on transactional data.</p>
+          <div class="project-tags"><span>SQL</span><span>Analytics</span><span>Reporting</span></div>
+          <span class="expand-hint">Click to expand ↓</span>
+        </div>
+        <div class="project-card-back">
+          <h3>PizzaHut Sales Report — SQL Analytics</h3>
+          <p>Deep-dive sales analytics project using SQL on PizzaHut transactional data. Covers revenue trends, top-selling items, customer patterns, and time-based analysis.</p>
+          <ul>
+            <li>Complex joins and aggregations</li>
+            <li>Window functions and CTEs</li>
+            <li>Revenue trend analysis</li>
+            <li>Customer segmentation queries</li>
+          </ul>
+          <a href="https://github.com/mdanwarulkarim/Pizzahut_Sales_Report_SQL" target="_blank" class="project-link">View on GitHub →</a>
+          <span class="collapse-hint">Click to collapse ↑</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="analytics">
+        <div class="project-card-front">
+          <div class="project-num mono">04</div>
+          <div class="project-icon">🏪</div>
+          <h3>Supershop Sales Analysis — SQL</h3>
+          <p>Data analysis using SQL applied to supershop sales data for business insights and reporting.</p>
+          <div class="project-tags"><span>SQL</span><span>Data Analysis</span></div>
+          <span class="expand-hint">Click to expand ↓</span>
+        </div>
+        <div class="project-card-back">
+          <h3>Supershop Sales Analysis</h3>
+          <p>Applied SQL analysis on supershop sales data to uncover actionable business insights, product performance, and sales patterns.</p>
+          <ul>
+            <li>Product performance ranking</li>
+            <li>Sales period comparisons</li>
+            <li>Inventory and demand analysis</li>
+            <li>Structured business reporting</li>
+          </ul>
+          <a href="https://github.com/mdanwarulkarim/Supershop_Sales_Analysis" target="_blank" class="project-link">View on GitHub →</a>
+          <span class="collapse-hint">Click to collapse ↑</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="bi">
+        <div class="project-card-front">
+          <div class="project-num mono">05</div>
+          <div class="project-icon">📈</div>
+          <h3>Power BI Sales Dashboard</h3>
+          <p>Interactive Power BI dashboard using DAX measures for KPI tracking and executive sales insights.</p>
+          <div class="project-tags"><span>Power BI</span><span>DAX</span><span>Dashboard</span></div>
+          <span class="expand-hint">Click to expand ↓</span>
+        </div>
+        <div class="project-card-back">
+          <h3>Power BI Sales Project</h3>
+          <p>Built an interactive Power BI dashboard with custom DAX calculations for real-time KPI monitoring, trend analysis, and executive-level reporting.</p>
+          <ul>
+            <li>Custom DAX measures and KPIs</li>
+            <li>Interactive slicers and filters</li>
+            <li>Sales trend visualizations</li>
+            <li>Executive summary page</li>
+          </ul>
+          <a href="https://github.com/mdanwarulkarim/Power_BI_Sales_Project" target="_blank" class="project-link">View on GitHub →</a>
+          <span class="collapse-hint">Click to collapse ↑</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="analytics">
+        <div class="project-card-front">
+          <div class="project-num mono">06</div>
+          <div class="project-icon">🏙️</div>
+          <h3>Chicago Payroll Data Analysis</h3>
+          <p>Exploratory data analysis on Chicago city payroll dataset using Pandas and NumPy.</p>
+          <div class="project-tags"><span>Python</span><span>Pandas</span><span>NumPy</span></div>
+          <span class="expand-hint">Click to expand ↓</span>
+        </div>
+        <div class="project-card-back">
+          <h3>Chicago Payroll Data — Pandas & NumPy</h3>
+          <p>Comprehensive EDA on Chicago city employee payroll data. Analysed salary distributions, department breakdowns, and workforce patterns using Python.</p>
+          <ul>
+            <li>Data cleaning and preprocessing</li>
+            <li>Salary distribution analysis</li>
+            <li>Department-wise breakdowns</li>
+            <li>Statistical summaries</li>
+          </ul>
+          <a href="https://github.com/mdanwarulkarim/Chicago_Payroll_Data_Exercise_Pandas-Numpy.git" target="_blank" class="project-link">View on GitHub →</a>
+          <span class="collapse-hint">Click to collapse ↑</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="analytics">
+        <div class="project-card-front">
+          <div class="project-num mono">07</div>
+          <div class="project-icon">🛒</div>
+          <h3>Customer Purchase Analysis</h3>
+          <p>Customer behavior analysis and segmentation using Pandas and NumPy for retail insights.</p>
+          <div class="project-tags"><span>Python</span><span>Pandas</span><span>Segmentation</span></div>
+          <span class="expand-hint">Click to expand ↓</span>
+        </div>
+        <div class="project-card-back">
+          <h3>Customer Purchase Data Analysis</h3>
+          <p>Analysed customer purchase patterns to identify behaviour segments, peak buying times, and product preferences using Python data science libraries.</p>
+          <ul>
+            <li>Purchase pattern identification</li>
+            <li>Customer segmentation</li>
+            <li>Product affinity analysis</li>
+            <li>Visual reporting with Matplotlib</li>
+          </ul>
+          <a href="https://github.com/mdanwarulkarim/Customer-Purchase-Data-Analysis-Pandas-Numpy-Exercise-.git" target="_blank" class="project-link">View on GitHub →</a>
+          <span class="collapse-hint">Click to collapse ↑</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="design">
+        <div class="project-card-front">
+          <div class="project-num mono">08</div>
+          <div class="project-icon">📱</div>
+          <h3>Student Reminder App — UI/UX</h3>
+          <p>Full Figma prototype for a mobile student to-do and reminder app with polished UI/UX design.</p>
+          <div class="project-tags"><span>Figma</span><span>UI/UX</span><span>Mobile</span></div>
+          <span class="expand-hint">Click to expand ↓</span>
+        </div>
+        <div class="project-card-back">
+          <h3>Student Reminder To-Do List — UI Design</h3>
+          <p>Designed a full mobile app UI/UX prototype in Figma for a student productivity app. Includes task management, reminders, and clean modern interface design.</p>
+          <ul>
+            <li>Full screen-by-screen prototype</li>
+            <li>Component-based design system</li>
+            <li>User flow and navigation</li>
+            <li>Published as Figma Community resource</li>
+          </ul>
+          <a href="https://www.figma.com/file/jVKg8RbMQuBoUURL1Z1SnJ/" target="_blank" class="project-link">View on Figma →</a>
+          <span class="collapse-hint">Click to collapse ↑</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ EXPERIENCE ═══════════════════ -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label mono">04 / experience</div>
+    <h2 class="section-title">Work <span class="accent">Experience</span></h2>
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date mono">IIUM, Malaysia</div>
+        <div class="timeline-card">
+          <div class="tl-header">
+            <h3>Web Application Developer</h3>
+            <span class="tl-company">Office of Security Management (OSEM)</span>
+          </div>
+          <ul class="tl-bullets">
+            <li>Developed and maintained a relational database system for IIUM Auxiliary Police.</li>
+            <li>Managed and maintained information records for personnel.</li>
+            <li>Built the information bridge between end-users and the backend database.</li>
+            <li>Performed data transformation and assisted with hardware/software design.</li>
+          </ul>
+          <div class="tl-tags"><span>Database</span><span>Web Dev</span><span>Data Management</span></div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date mono">Dhaka, Bangladesh</div>
+        <div class="timeline-card">
+          <div class="tl-header">
+            <h3>Data Entry Operator</h3>
+            <span class="tl-company">Unique Hospital</span>
+          </div>
+          <ul class="tl-bullets">
+            <li>Accurately entered and maintained patient and operational data into hospital management systems.</li>
+            <li>Ensured data integrity and consistency across records.</li>
+            <li>Supported reporting and administrative workflows.</li>
+          </ul>
+          <div class="tl-tags"><span>Data Entry</span><span>Data Integrity</span><span>Reporting</span></div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date mono">Freelance</div>
+        <div class="timeline-card">
+          <div class="tl-header">
+            <h3>Data Analyst</h3>
+            <span class="tl-company">Self-Directed / Project-Based</span>
+          </div>
+          <ul class="tl-bullets">
+            <li>Created Excel dashboards using pivot tables and advanced formulas for data reporting.</li>
+            <li>Performed SQL-based analytics for PizzaHut and Supershop datasets.</li>
+            <li>Built Power BI dashboards using DAX for KPI tracking.</li>
+            <li>Conducted customer and payroll data analysis with Python.</li>
+          </ul>
+          <div class="tl-tags"><span>SQL</span><span>Power BI</span><span>Python</span><span>Excel</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ EDUCATION ═══════════════════ -->
+<section id="education">
+  <div class="container">
+    <div class="section-label mono">05 / education</div>
+    <h2 class="section-title">Academic <span class="accent">Journey</span></h2>
+    <div class="edu-grid">
+
+      <div class="edu-card reveal">
+        <div class="edu-year accent mono">2026 –</div>
+        <div class="edu-degree">M.Sc. in Data Science &amp; Analytics</div>
+        <div class="edu-uni">East West University</div>
+        <div class="edu-location">📍 Dhaka, Bangladesh</div>
+        <div class="edu-gpa">CGPA: 3.50 / 4.00</div>
+      </div>
+
+      <div class="edu-card reveal">
+        <div class="edu-year accent mono">2023</div>
+        <div class="edu-degree">B.IT — Business Intelligence &amp; Information Science</div>
+        <div class="edu-uni">International Islamic University Malaysia (IIUM)</div>
+        <div class="edu-location">📍 Selangor, Malaysia</div>
+        <div class="edu-gpa">CGPA: 3.50 / 4.00</div>
+      </div>
+
+      <div class="edu-card reveal">
+        <div class="edu-year accent mono">2016</div>
+        <div class="edu-degree">Level 5 BTEC HND — Aeronautical Engineering (QCF)</div>
+        <div class="edu-uni">College of Aviation Technology (Catech)</div>
+        <div class="edu-location">📍 Dhaka, Bangladesh</div>
+        <div class="edu-gpa">Pearson Education Limited, UK</div>
+      </div>
+
+      <div class="edu-card reveal">
+        <div class="edu-year accent mono">2013</div>
+        <div class="edu-degree">Higher Secondary Certificate (HSC)</div>
+        <div class="edu-uni">Cambrian School and College</div>
+        <div class="edu-location">📍 Dhaka, Bangladesh</div>
+        <div class="edu-gpa">GPA: 5.00 / 5.00 ⭐</div>
+      </div>
+
+      <div class="edu-card reveal">
+        <div class="edu-year accent mono">2011</div>
+        <div class="edu-degree">Secondary School Certificate (SSC)</div>
+        <div class="edu-uni">Dagonbhuiyan Academy</div>
+        <div class="edu-location">📍 Feni, Bangladesh</div>
+        <div class="edu-gpa">GPA: 4.88 / 5.00</div>
+      </div>
+
+      <div class="edu-card cert-card reveal">
+        <div class="edu-year accent mono">🏆</div>
+        <div class="edu-degree">Certifications</div>
+        <div class="edu-uni">Grad Bunker Akaademy</div>
+        <div class="edu-location">Business Intelligence Data Analyst — Batch B-2315</div>
+        <div class="edu-uni margin-top">Interactive Cares</div>
+        <div class="edu-location">Data Science &amp; ML Career Path — Batch B-03</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CONTACT ═══════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label mono">06 / contact</div>
+    <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+    <p class="section-sub">Whether it's a project, job opportunity, or just a hello — I'd love to hear from you.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <a href="mailto:karim247live@gmail.com" class="contact-val">karim247live@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <a href="tel:+8801686855770" class="contact-val">+8801686855770</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Location</div>
+            <span class="contact-val">Mugdapara, Dhaka, Bangladesh</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🌐</div>
+          <div>
+            <div class="contact-label">Language</div>
+            <span class="contact-val">English (IELTS 6.5) &nbsp;·&nbsp; Bangla (Native)</span>
+          </div>
+        </div>
+        <div class="contact-socials">
+          <a href="https://github.com/mdanwarulkarim" target="_blank" class="btn btn-ghost btn-sm">GitHub</a>
+          <a href="https://www.linkedin.com/in/anwarul-karim-377a0b194/" target="_blank" class="btn btn-ghost btn-sm">LinkedIn</a>
+          <a href="https://sites.google.com/view/anwarulkarim/home" target="_blank" class="btn btn-ghost btn-sm">Website</a>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="fname">Your Name</label>
+          <input type="text" id="fname" placeholder="John Doe" required />
+        </div>
+        <div class="form-group">
+          <label for="femail">Your Email</label>
+          <input type="email" id="femail" placeholder="john@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="fsubject">Subject</label>
+          <input type="text" id="fsubject" placeholder="Project Collaboration" />
+        </div>
+        <div class="form-group">
+          <label for="fmessage">Message</label>
+          <textarea id="fmessage" rows="5" placeholder="Hi Karim, I'd love to discuss..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Send Message ✉️</button>
+        <div class="form-note">* This form opens your email client with a pre-filled message.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-logo">AK<span class="dot">.</span></div>
+    <p class="footer-copy">© 2025 MD Anwarul Karim · Built with ❤️ · Dhaka, Bangladesh</p>
+    <a href="#hero" class="back-to-top" id="backTop">↑ Top</a>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
