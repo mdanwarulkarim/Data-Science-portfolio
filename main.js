@@ -56,98 +56,10 @@ navLinks.querySelectorAll('a').forEach(link => {
 });
 
 // ── Typing animation ───────────────────────────
-const roles = [
-  'Data Scientist',
-  'Business Intelligence Analyst',
-  'ML Engineer',
-  'SQL Developer',
-  'Power BI Developer',
-  'Data Analyst',
-];
-let roleIndex = 0, charIndex = 0, isDeleting = false;
-const roleEl = document.getElementById('roleText');
-
-function typeRole() {
-  const current = roles[roleIndex];
-  if (isDeleting) {
-    roleEl.textContent = current.substring(0, charIndex--);
-    if (charIndex < 0) { isDeleting = false; roleIndex = (roleIndex + 1) % roles.length; setTimeout(typeRole, 400); return; }
-    setTimeout(typeRole, 50);
-  } else {
-    roleEl.textContent = current.substring(0, charIndex++);
-    if (charIndex > current.length) { isDeleting = true; setTimeout(typeRole, 1800); return; }
-    setTimeout(typeRole, 80);
-  }
-}
-setTimeout(typeRole, 800);
+// Removed - no longer used in new design
 
 // ── Particle Canvas ────────────────────────────
-const canvas = document.getElementById('particleCanvas');
-const ctx    = canvas.getContext('2d');
-let particles = [], animId;
-
-function resizeCanvas() {
-  canvas.width  = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
-
-class Particle {
-  constructor() { this.reset(); }
-  reset() {
-    this.x  = Math.random() * canvas.width;
-    this.y  = Math.random() * canvas.height;
-    this.vx = (Math.random() - 0.5) * 0.4;
-    this.vy = (Math.random() - 0.5) * 0.4;
-    this.r  = Math.random() * 1.5 + 0.5;
-    this.a  = Math.random() * 0.5 + 0.1;
-  }
-  update() {
-    this.x += this.vx; this.y += this.vy;
-    if (this.x < 0 || this.x > canvas.width)  this.vx *= -1;
-    if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-  }
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(0,195,255,${this.a})`;
-    ctx.fill();
-  }
-}
-
-function initParticles() {
-  const count = Math.floor((canvas.width * canvas.height) / 12000);
-  particles = Array.from({ length: Math.min(count, 100) }, () => new Particle());
-}
-
-function drawConnections() {
-  for (let i = 0; i < particles.length; i++) {
-    for (let j = i + 1; j < particles.length; j++) {
-      const dx = particles[i].x - particles[j].x;
-      const dy = particles[i].y - particles[j].y;
-      const dist = Math.sqrt(dx*dx + dy*dy);
-      if (dist < 130) {
-        ctx.beginPath();
-        ctx.moveTo(particles[i].x, particles[i].y);
-        ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(0,195,255,${0.12 * (1 - dist/130)})`;
-        ctx.lineWidth = 0.6;
-        ctx.stroke();
-      }
-    }
-  }
-}
-
-function animateParticles() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawConnections();
-  particles.forEach(p => { p.update(); p.draw(); });
-  animId = requestAnimationFrame(animateParticles);
-}
-
-initParticles();
-animateParticles();
+// Removed - no longer used in new design
 
 // ── Skill bar animation (IntersectionObserver) ─
 const skillsSection = document.getElementById('skills');
