@@ -2,39 +2,6 @@
    MAIN.JS — Portfolio Interactive Logic
 ═══════════════════════════════════════════════ */
 
-// ── Custom Cursor ──────────────────────────────
-const cursor = document.getElementById('cursor');
-const follower = document.getElementById('cursorFollower');
-let mouseX = 0, mouseY = 0, followerX = 0, followerY = 0;
-
-document.addEventListener('mousemove', e => {
-  mouseX = e.clientX; mouseY = e.clientY;
-  cursor.style.left = mouseX + 'px';
-  cursor.style.top  = mouseY + 'px';
-});
-
-function animateFollower() {
-  followerX += (mouseX - followerX) * 0.12;
-  followerY += (mouseY - followerY) * 0.12;
-  follower.style.left = followerX + 'px';
-  follower.style.top  = followerY + 'px';
-  requestAnimationFrame(animateFollower);
-}
-animateFollower();
-
-document.querySelectorAll('a, button, .project-card, .skill-category').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    cursor.style.width = '18px'; cursor.style.height = '18px';
-    follower.style.width = '48px'; follower.style.height = '48px';
-    follower.style.opacity = '0.3';
-  });
-  el.addEventListener('mouseleave', () => {
-    cursor.style.width = '10px'; cursor.style.height = '10px';
-    follower.style.width = '32px'; follower.style.height = '32px';
-    follower.style.opacity = '0.6';
-  });
-});
-
 // ── Navbar scroll effect ───────────────────────
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
